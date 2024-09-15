@@ -1,13 +1,6 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+    
 
-def home(response):
-    return HttpResponse('''<h1> This is a heading line </h1>
-                        
-                        <div> 
-                        <a href="/first/about"> About </a>
-                        <a href="/first/contact"> Contact </a>
-                        <a href="/second/courses"> Courses </a>
-                        <a href="/second/feedback"> Feedback </a>
-                        </div>
-                        
-                        ''')
+def home(request):
+    return render(request, 'home/index.html')
